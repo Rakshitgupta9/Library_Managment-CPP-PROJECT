@@ -278,9 +278,11 @@ public:
 			case 1:
 				bIR.issue_book();
 				break;
+				
 			case 2:
 				bIR.return_book();
 				break;
+				
 			case 3:
 			{
 				fstream BIR("lib_issue_return.dat", ios::in);
@@ -301,6 +303,7 @@ public:
 					cout << "\nNo books have been issued or returned.";
 				break;
 			}
+			
 			case 4:
 			{
 				Sleep(500);
@@ -584,19 +587,16 @@ public:
 	}
 };
 
+
 void about()
 {
-	fstream about_out("lib_about.dat", ios::in);
-	char about_str[500];
 	cout << "\n\n==========================================================================================\n\n";
-	about_out.seekg(0, ios::beg);
-	while (about_out.getline(about_str, 500))
-	{
-		cout << about_str << endl;
-	}
+	cout<< "\t\t\t\tProject Made By - Rakshit Gupta";
+	cout<< "\n\t\t\t\t  2021a1r050@mietjammu.in";
 	cout << "\n==========================================================================================\n";
-	about_out.close();
+
 }
+
 
 int main()
 {
